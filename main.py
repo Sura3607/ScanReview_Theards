@@ -50,5 +50,3 @@ a_df2 = a_df2.where(pd.notnull(a_df2), None)
 #add to excel
 a_df2.to_excel(r'D:\ScanReview_Theards\UnfilteredData\AppStoreReviews.xlsx', index=False)
 print('Dữ liệu đã được lưu vào tệp Excel thành công.')
-
-#hehehe
