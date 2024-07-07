@@ -19,7 +19,7 @@ def remove_stopwords(text):
     return ' '.join([word for word in text.split() if word.lower() not in stopwords])
 
 # Áp dụng các hàm trên cho cột chứa các câu đánh giá
-a_df['cleaned_reviews'] = a_df['review_title'].apply(lambda x: remove_stopwords(remove_emojis(x))) #appstore
+a_df['cleaned_reviews'] = a_df['review_description'].apply(lambda x: remove_stopwords(remove_emojis(x))) #appstore
 g_df['cleaned_reviews'] = g_df['review_description'].apply(lambda x: remove_stopwords(remove_emojis(x))) #googlePlay
 
 # Lưu kết quả vào file Excel mới
