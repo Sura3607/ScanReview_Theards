@@ -26,11 +26,11 @@ g_df2.drop(columns={'userImage', 'reviewCreatedVersion'},inplace = True)
 g_df2.rename(columns= {'score': 'rating','userName': 'user_name', 'reviewId': 'review_id', 'content': 'review_description', 'at': 'review_date', 'replyContent': 'developer_response', 'repliedAt': 'developer_response_date', 'thumbsUpCount': 'thumbs_up'},inplace = True)
 g_df2.insert(loc=0, column='source', value='Google Play')
 g_df2.insert(loc=3, column='review_title', value=None)
-g_df2['laguage_code'] = 'en'
-g_df2['country_code'] = 'us'
+g_df2['laguage_code'] = 'vi'
+g_df2['country_code'] = 'vn'
 
 #add to excel
-g_df2.to_excel('GooglePlayReviews.xlsx', index=False)
+g_df2.to_excel(r'D:\ScanReview_Theards\UnfilteredData\GooglePlayReviews.xlsx', index=False)
 print('Dữ liệu đã được lưu vào tệp Excel thành công.')
 
 #appstore
@@ -48,5 +48,5 @@ a_df2.rename(columns= {'review': 'review_description','userName': 'user_name', '
 a_df2 = a_df2.where(pd.notnull(a_df2), None)
 
 #add to excel
-a_df2.to_excel('AppStoreReviews.xlsx', index=False)
+a_df2.to_excel(r'D:\ScanReview_Theards\UnfilteredData\AppStoreReviews.xlsx', index=False)
 print('Dữ liệu đã được lưu vào tệp Excel thành công.')
