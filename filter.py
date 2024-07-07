@@ -6,7 +6,7 @@ import re
 a_df = pd.read_excel(r'D:\ScanReview_Theards\UnfilteredData\AppStoreReviews.xlsx') #appstore
 g_df = pd.read_excel(r'D:\ScanReview_Theards\UnfilteredData\GooglePlayReviews.xlsx') #googlePlay
 
-# Đọc file txt chứa các từ dừng
+# Đọc file txt chứa các stopword
 with open('vietnamese-stopwords.txt', 'r', encoding='utf-8') as file:
     stopwords = set(file.read().splitlines())
 
