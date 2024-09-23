@@ -2,6 +2,7 @@ import pandas as pd
 import emoji
 import re
 
+#testtt
 # Đọc file Excel
 a_df = pd.read_excel(r'D:\ScanReview_Theards\UnfilteredData\AppStoreReviews.xlsx') #appstore
 g_df = pd.read_excel(r'D:\ScanReview_Theards\UnfilteredData\GooglePlayReviews.xlsx') #googlePlay
